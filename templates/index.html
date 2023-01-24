@@ -1,0 +1,23 @@
+
+{% if logged_in %}
+
+	<a href="/logout">Logout</a>
+{% else  %}
+
+	<div>
+	<form action="/login" method="POST">
+		<input name="uname" placeholder="Username" required>
+		<br>
+		<input name="pwd" placeholder="Password" required>
+		<br>
+		<button type="submit" name="lbtn">login</button>
+	</form>
+	</div>
+
+	<hr>
+
+<div align="center"> Don't have an account <a href="/register">Sign Up</a> </div>
+
+{% endif %}
+
+	
