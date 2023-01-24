@@ -1,19 +1,45 @@
-<div>
+{% extends 'base.html' %}
 
+{% block title %}SignUp{% endblock %}
+
+{% block content %}
+
+<div class="container">
+
+	
+	<div class="mt-5 card card-body m-auto col-md-4">
 	<form action="/signup" method="POST">
-		<input type="FullName" name="flname" placeholder="FullName">
-	
-		<input type="text" name="uname" placeholder="Username">
-	
-		<input type="password" name="pwd" placeholder="Password">
+
+		<h3 class="text-center">FlaskAuth</h3>
+		<div class="mb-2">
+			<input class="form-control" type="FullName" name="flname" placeholder="FullName">
+		</div>
 
 	
-		<button type="submit" name="sbtn" > Sign Up </button>
+		<div class="mb-2">
+			<input class="form-control" type="text" name="uname" placeholder="Username">
+		</div>
+
+		<div class="mb-2">
+			<input class="form-control" type="password" name="pwd" placeholder="Password">
+		</div>
+			
+		<div class="d-grid gap-2">
+			<button class="btn btn-success" type="submit" name="sbtn" > Sign Up </button>
+		</div>
 
 	</form>
+	
+	<div class="mt-3 text-center">
+		Already Have an account? <a href="/"> login </a>
+	</div>
+	
 </div>
+		
+</div>
+	
+	
+	{% endblock %}
 
 
-<div align="center">
-	Already Have an account? <a href="/"> login </a>
-</div>
+
