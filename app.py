@@ -83,13 +83,16 @@ def home():
 #signup form
 @app.route('/register')
 def register():
-    return render_template('signup.html')
+    if 'username' in session:
+        return redirect('/')
+    else:
+        return render_template('signup.html')
 
 
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(port=7000,debug=True)
 
 
 
